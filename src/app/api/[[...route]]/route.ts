@@ -2,10 +2,10 @@ import { Redis } from "@upstash/redis/cloudflare";
 import { Hono } from "hono";
 import { env } from "hono/adapter";
 import { cors } from "hono/cors";
-// import { handle } from "hono/vercel";
+import { handle } from "hono/vercel";
 
 // this is just to deploy the api to the edge using vercel...
-// export const runtime = "edge";
+export const runtime = "edge";
 
 type EnvConfig = {
 	UPSTASH_REDIS_TOKEN: string;
@@ -73,5 +73,5 @@ app.get("/api/search", async (c) => {
 });
 
 // again below is for deploying the api to the edge using vercel...
-// export const GET = handle(app);
+export const GET = handle(app);
 export default app;
