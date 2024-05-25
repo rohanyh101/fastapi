@@ -74,4 +74,4 @@ app.get("/api/search", async (c) => {
 
 // again below is for deploying the api to the edge using vercel...
 export const GET = handle(app);
-export default app;
+// export default app;
